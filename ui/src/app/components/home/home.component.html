@@ -1,0 +1,90 @@
+<!-- ======= Header ======= -->
+<header id="header" class="header">
+  <div style="margin: 0;" class="container d-flex align-items-center justify-content-between">
+
+    <!-- Logo -->
+    <h1 class="logo"><a href="/home">Foodie</a></h1>
+
+    <!-- category images -->
+    <div class="category-container">
+      <!-- juice -->
+      <div class="category juice transition">
+        <button class="image-btn">
+          <img class="image" src="../../../assets/img/categories/juice.jpg" alt="Juice">
+        </button>
+        <p class="category-name">Juice</p>
+      </div>
+
+      <!-- delivery -->
+      <div class="category delivery transition">
+        <button class="image-btn" value="delivery" (click)="searchByCategory($event)">
+          <img class="image" src="../../../assets/img/categories/delivery.jpg" alt="Delivery">
+        </button>
+        <p class="category-name">Delivery</p>
+      </div>
+
+      <!-- dine-in -->
+      <div class="category dine-in transition">
+        <button class="image-btn" value="dine-in" (click)="searchByCategory($event)">
+          <img class="image" src="../../../assets/img/categories/dine in.jpg" alt="dine-in">
+        </button>
+        <p class="category-name">Dine-in</p>
+      </div>
+
+      <!-- Fast food -->
+      <div class="category fast-food transition">
+        <button class="image-btn">
+          <img class="image" src="../../../assets/img/categories/fast-food.jpg" alt="fast-food">
+        </button>
+        <p class="category-name">Fast food</p>
+      </div>
+    </div>
+
+    <!-- navigation -->
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/home">Home</a></li>
+        <li><a class="nav-link scrollto" routerLink="/home/favourite">Favourites</a></li>
+        <li><a class="nav-link scrollto" href="/about">About</a></li>
+        <li><a class="nav-link" (click)="onLogout()">Logout</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+
+      <!-- profile avatar -->
+      <img [src]="pic" alt="Avatar" class="avatar" style="margin-left: 5px;">
+    </nav><!-- .navbar -->
+  </div>
+</header><!-- End Header -->
+
+
+<!-- Search field  -->
+<div class="header-input">
+  <form #searchForm="ngForm" (ngSubmit)="onSearch(searchForm)">
+    <select [(ngModel)]="searchBy" style="margin-right: 5px;" name="searchBy" id="searchBy">
+      <option selected>Search By</option>
+      <option [value]="'city'">City</option>
+      <option [value]="'name'">Name</option>
+    </select>
+    <input name="query" [(ngModel)]="query" type="text" placeholder="Search" style="width: 500px;">
+    <button style="margin-left:5px;" type="submit">Search</button>
+  </form>
+</div>
+
+<main>
+  <div class="content" *ngIf="userNotSearched; then thenBlock; else elseBlock;"></div>
+
+  <ng-template #thenBlock>
+    <h1>Recommended</h1>
+    <br>
+    <app-restaurants [restaurants]="restaurants"></app-restaurants>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <app-restaurants [query]="query" [restaurants]="restaurants"></app-restaurants>
+  </ng-template>
+
+  <router-outlet></router-outlet>
+</main>
+
+<!-- TODO: create and attach footer tag here -->
+<!-- <app-footer></app-footer> -->

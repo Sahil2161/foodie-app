@@ -1,0 +1,105 @@
+<div class="signup-container">
+
+  <div class="form">
+    <div class="form-header">
+    </div>
+
+    <div class="form-body">
+      <form #saveForm="ngForm" (ngSubmit)="saveUser(saveForm)">
+        <!-- profile pic -->
+        <!-- <div class="container text-center">
+          <img [src]="url" height="100px" class="rounded-square" style=color:red id="img"><br>
+           <input type="file" (change)="onselectFile($event)" id="files">
+          
+          <label for="imageUpload" class="btn btn-primary btn-block btn-outlined" id="img-btn" style="color: wheat;background-color: tomato;font-size: medium;">Upload Image</label>
+          <input type="file" id="imageUpload" accept="image/*" style="display:none" (change)="onselectFile($event)">&nbsp;
+     
+        </div> -->
+
+        
+        <h4 class="text-warning text-center pt-5">Hey Foodie :) SignUp Here!</h4>
+        <img [src]="myimg" width="100px">
+        <input type="file" (change)="onFileSelected($event)">
+        <label>
+          <input type="text" class="input" name="fullname" [(ngModel)]="user.fullName" placeholder="FullName"
+            required />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input type="text" class="input" name="email" [(ngModel)]="user.emailId" placeholder="Email" required />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input type="text" class="input" name="phonenumber" [(ngModel)]="user.phoneNumber" placeholder="Phonenumber"
+            required />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input type="password" class="input" name="password" [(ngModel)]="user.password" placeholder="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            required />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input type="password" class="input" name="cpassword" placeholder="Confirm password" required />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <!-- security questions dropdown -->
+          <div>
+            <select>
+              <option selected>Select a security question</option>
+              <!-- <option *ngFor="let question of securityQuestions">{{question}}</option> -->
+              <option>"What is your graduation year?"</option>
+              <option>"What is your first pet name?"</option>
+              <option>"What is your birth month?"</option>
+              <option>"What is your favourite food?"</option>
+              <option>"What is your favourite place?"</option>
+            </select>
+          </div>
+        </label>
+
+        <!-- security answer feild -->
+        <label>
+          <input type="text" class="input" name="securityans" [(ngModel)]="user.securityAnswer"
+            placeholder="Securityans" required />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <!-- gender dropdown -->
+          <div>
+            <select>
+              <option selected>Select your Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </label>
+
+        <button type="submit">Sign Up</button>
+
+        <p class="message">Already have an account? <a href="login/">Login</a></p>
+      </form>
+    </div>
+  </div>
+</div>

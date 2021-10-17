@@ -1,0 +1,12 @@
+<h2 *ngIf="!!query">Search results for query: {{query}}</h2>
+<div style="padding: 10px 20px;" class="container-fluid d-flex">
+  
+  <div class="card" style="width: 18rem;margin-right: 10px;" *ngFor="let restaurant of restaurants">
+    <img class="card-img-top" [src]="restaurant.thumbnail" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{restaurant.name  | titlecase }}</h5>
+      <p class="card-text"><small>{{restaurant.city | titlecase}}</small></p>
+      <button [id]="restaurant.id" class="btn btn-primary button" (click)="addFavourite($event)">Add favourite</button>
+    </div>
+  </div>
+</div>

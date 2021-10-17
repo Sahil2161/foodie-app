@@ -1,0 +1,10 @@
+<div [(ngModel)]="favourites" style="padding: 10px 20px;" class="container-fluid d-flex">
+  <div class="card" style="width: 18rem;margin-right: 10px;" *ngFor="let restaurant of favourites">
+    <img class="card-img-top" [src]="restaurant.thumbnail" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{restaurant.name | titlecase}}</h5>
+      <p class="card-text"><small>{{restaurant.city | titlecase}}</small></p>
+      <button [id]="restaurant.restId" [name]="restaurant.name" class="btn btn-danger button" (click)="removeFavourite($event)">Remove favourite</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,131 @@
+#header {
+  background: rgba(25, 25, 25, 0.95);
+  transition: all 0.5s;
+  z-index: 997;
+  height: 70px;
+}
+
+#header.fixed-top {
+  background: #191919;
+}
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#header .logo a {
+  color: #fff;
+}
+#header .logo img {
+  max-height: 40px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
+}
+
+/* desktop */
+
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+/* /* .navbar li {
+  position: relative;
+} */
+.navbar > ul > li { 
+  margin-left: 5px;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 15px 24px 15px;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  background: #0275d8;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+
+header.header {
+  display: flex;
+  justify-content: space-between;
+  height: 110px !important;
+}
+
+div.header-input {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 10px;
+}
+
+div.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
+  height: auto;
+  width: 500px;
+}
+
+.category {
+  object-fit: contain;
+  width: 150px;
+  height: auto;
+  margin-inline: auto;
+}
+
+button.image-btn {
+  border: none;
+}
+
+.image {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.category-name {
+  color:whitesmoke;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@media(max-width: 459px) {
+    .container .content .category {
+        flex-direction: column;
+      }
+    } */
+
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+div.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: transparent url("../../../assets/img/foodie.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+form {
+  width: auto;
+  height: auto;
+  margin: auto;
+  background: #FFFFFF;
+  padding: 60px 120px 80px 120px;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+label {
+  display: block;
+  position: relative;
+  margin: 40px 0px;
+}
+
+.label-txt {
+  position: absolute;
+  top: -1.6em;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: .8em;
+  letter-spacing: 1px;
+  color: rgb(120, 120, 120);
+  transition: ease .3s;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.line-box {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #BCBCBC;
+}
+
+.line {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #8BC34A;
+  transition: ease .6s;
+}
+
+.input:focus+.line-box .line {
+  width: 100%;
+}
+
+.label-active {
+  top: -3em;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--bs-blue);
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+button:hover {
+  background: var(--bs-green);
+  color: #ffffff;
+}
+
+/* 
+div.signup-container {
+  background: transparent url("../../../assets/img/foodie.jpg") no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+#sm {
+  color: rgb(196, 196, 216);
+  margin-left: 1em;
+}
+
+body, html {
+  height: 100%;
+}
+
+body, html {
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 850px;
+  
+}
+
+#butt {
+  margin-left: 1em;
+  margin-top: -2em;
+}
+
+.form-group {
+  margin-left: 1em;
+  color: rgb(243, 230, 230);
+}
+
+.form-control {
+  margin-bottom: 1%;
+}
+
+.input {
+  width: 50px !important;
+}
+
+#hi {
+  margin-left: 5em;
+  width: 10em;
+  background: #f1f1f1
+}
+
+#he {
+  margin-left: 50em;
+  width: 30em;
+}
+
+#hii {
+  margin-left: 10em;
+  width: 10em;
+}
+
+#cl {
+  margin-top: 1em;
+}
+
+#img {
+  margin-top: -80px;
+}
+
+#hee {
+  margin-right: unset;
+  margin-left: initial;
+  margin-top: inherit;
+  color: rgb(212, 84, 10);
+  margin-top: 1em;
+}
+
+#foo {
+  margin-top: 2em;
+}
+
+body {
+  text-align: justify;
+}
+
+form {
+  display: inline-block;
+}
+
+.content {
+  max-width: 250px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(238, 224, 224);
+}
+
+a:hover {
+  color: rgb(202, 129, 34);
+  transition: all 0.5s ease 0s;
+}
+  */
